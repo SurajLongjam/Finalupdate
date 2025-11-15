@@ -22,7 +22,7 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
-      z-index: 1000;
+      z-index: 1500; /* prevents header from covering hamburger */
     }
 
     /* Sidebar */
@@ -82,17 +82,17 @@
 
     /* Hamburger */
     .hamburger {
-      display: none;
+      display: block;
       position: fixed;
       top: 15px;
-      right: 20px;
-      font-size: 28px;
+      left: 15px;
+      font-size: 30px;
       color: white;
       background: #1f2937;
-      padding: 8px 14px;
+      padding: 10px 14px;
       border-radius: 8px;
       cursor: pointer;
-      z-index: 1001;
+      z-index: 2000; /* ensures it stays above dashboard */
     }
 
     @media (max-width: 768px) {
