@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Designer Portfolio</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -28,10 +27,9 @@
       z-index: 1000;
     }
 
-    header .logo img {
-      height: 45px;
-      width: auto;
-      object-fit: contain;
+    header .logo {
+      font-size: 24px;
+      font-weight: 600;
     }
 
     nav a {
@@ -56,7 +54,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 100px 60px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      gap: 40px;
+    }
+
+    .hero-text {
+      width: 50%;
     }
 
     .hero-text h1 {
@@ -79,12 +82,33 @@
       display: inline-block;
     }
 
+    .hero-buttons a.hire {
+      background: #e4b037;
+      color: black;
+    }
+
     .hero img {
-      max-width: 380px;
-      height: auto;
+      width: 50%;
+      max-width: 420px;
       border-radius: 20px;
       object-fit: cover;
-      display: block;
+    }
+
+    /* MOBILE FIX */
+    @media (max-width: 900px) {
+      .hero {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .hero-text,
+      .hero img {
+        width: 100%;
+      }
+
+      .hero img {
+        margin-top: 20px;
+      }
     }
 
     /* SERVICES SECTION */
@@ -135,15 +159,15 @@
       color: white;
       margin-top: 50px;
     }
+
   </style>
 </head>
+
 <body>
 
   <!-- NAVIGATION BAR -->
   <header>
-    <div class="logo">
-      <img src="IMG_0880.jpeg" alt="Logo">
-    </div>
+    <div class="logo">Suraj.</div>
     <nav>
       <a href="#">Home</a>
       <a href="#services">Services</a>
@@ -163,11 +187,12 @@
 
       <div class="hero-buttons">
         <a href="#portfolio">View Portfolio</a>
-       <!-- <a href="#contact" style="background:#e4b037; color:black;">Hire Me</a> -->
+        <a href="#contact" class="hire">Hire Me</a>
       </div>
     </div>
 
-    <img src="IMG_0884.jpeg" alt="Profile Photo">
+    <!-- IMPORTANT: Your image file must be in the same folder as index.html -->
+    <img src="IMG_0880.jpeg" alt="Suraj Photo">
   </section>
 
   <!-- SERVICES SECTION -->
